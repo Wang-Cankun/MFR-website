@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-		<script src="/js/particles.min.js"></script>
-
 <head>
 	<meta charset="utf-8">
-	<title>GeneQC: Gene expression level Quality Check</title>
+	<title>MFR: Multi-Feature Relatedness model</title>
 
 	<link rel="stylesheet" media="screen" href="./home.css?v=8may2013">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Cankun Wang">
-	<meta name="description" content="Gene expression level Quality Check">
+	<meta name="author" content="Dave Shea">
+	<meta name="description" content="A demonstration of what can be accomplished visually through CSS-based design.">
 	<meta name="robots" content="all">
 
 
@@ -20,6 +18,35 @@
 	<![endif]-->
 </head>
 
+<!--
+
+
+
+	View source is a feature, not a bug. Thanks for your curiosity and
+	interest in participating!
+
+	Here are the submission guidelines for the new and improved csszengarden.com:
+
+	- CSS3? Of course! Prefix for ALL browsers where necessary.
+	- go responsive; test your layout at multiple screen sizes.
+	- your browser testing baseline: IE9+, recent Chrome/Firefox/Safari, and iOS/Android
+	- Graceful degradation is acceptable, and in fact highly encouraged.
+	- use classes for styling. Don't use ids.
+	- web fonts are cool, just make sure you have a license to share the files. Hosted 
+	  services that are applied via the CSS file (ie. Google Fonts) will work fine, but
+	  most that require custom HTML won't. TypeKit is supported, see the readme on this
+	  page for usage instructions: https://github.com/mezzoblue/csszengarden.com/
+
+	And a few tips on building your CSS file:
+
+	- use :first-child, :last-child and :nth-child to get at non-classed elements
+	- use ::before and ::after to create pseudo-elements for extra styling
+	- use multiple background images to apply as many as you need to any element
+	- use the Kellum Method for image replacement, if still needed. http://goo.gl/GXxdI
+	- don't rely on the extra divs at the bottom. Use ::before and ::after instead.
+
+		
+-->
 
 <body id="css-zen-garden">
 <div class="page-wrapper">
@@ -28,16 +55,15 @@
 	<div class="hh">
 		<header role="banner">
 		<h4> a </h4>
-			<h1>GeneQC</h1>
-			<h2>Gene expression level Quality Check</h2>
+			<h1>MFR:</h1>
+			<h2>A Machine Learning Model for measuring relatedness between a pair of genes</h2>
 		</header>
 		<div class = "dh">
 			<ul>
 				<li><a class = "active" href="./home.html">Home</a></li>
-                <li><a href="./author.html">Authors</a></li>
+                <li><a href="./description.html">Description</a></li>
                 <li><a href="./download.html">Download</a></li>
-				<li><a href="./tutorial.html">Tutorial</a></li>
-				<li><a href="./program.html">Program</a></li>
+                <li><a href="./contact.html">Contact</a></li>
 			</ul>
 		
 		</div>
@@ -45,39 +71,24 @@
 		
 
 		<div class="preamble" id="zen-preamble" role="article">
-		  <h1>Why is GeneQC needed?</h1>
-		  <p>Mapping Uncertainty, in which a given RNA-seq read can be mapped to multiple genomic locations, is a prominent issue in reference-based RNA-seq analyses throughout most eukaryotic species.  This issue can result in biased gene expression estimations which affects all downstream analyses, from assembly and differential gene expression to regulatory network elucidation. </p>
-		  <div class="fig1"><img border="0" src="./img/figure1.png" alt="GeneQC figure 1.2" onclick="window.open('./img/figure1.png', '_blank');" >
-		  <p class="fig">Figure 1. To be added</p></div>
+		  <h1>Overview</h1>
+		  <p>Multi-feature Relatedness (MFR) model is a machine learning model based on <abbr title="Support Vector Machine">SVM</abbr> and takes a total of 12 similarity-based gene pair features including both expression similarities and prior-knowledge based similarities as the input. And the output value is applied as an assessment criterion, namely “Multi-Feature Relatedness”, for measuring the relatedness between a pair of genes under given certain conditions.</p>
+		  <div class="fig1"><img border="0" src="../img/SVM7.gif" alt="Pulpit rock" width="450" height="300">
+		  <p class="fig">Figure 1. Construction of <abbr title="Multi-feature Relatedness">MFR</abbr> model</p></div>
+		  <p>From this web site, you can: </p>
+		  <ul class="can">
+  				<li><p><a href="./description.html">View the description of MFR model</a></p></li>
+  				<li><p><a href="./download.html">Download the script of MFR model freely for academic uses.</a></p></li>
+  				<li><p><a href="./download.html">Explore the results for further verification and biological analysis.</a></p></li>
+			</ul>
+			
 	  </div>
-
-		<div class="preamble" id="zen-preamble" role="article">
-			<h1>How do we approach this problem?</h1>
-			<p>The first step to addressing mapping uncertainty is to develop a method for determining how severe the problem is for a given dataset. In GeneQC, we extract usable features from two genetic levels, genomic and transcriptomic. From the genomic level, we look at the sequence similarity for two genomic locations, whereas for the transcriptomic level, we investigate the proportion of shared reads for two genes or transcripts after initial alignment.</p>
-			<div class="fig1"><img border="0" src="./img/figure2.jpg" alt="GeneQC " onclick="window.open('./img/figure2.jpg', '_blank');" >
-			<p class="fig">Figure 2. To be added</p></div>
-		</div>
-
-
-		<div class="preamble" id="zen-preamble" role="article">
-			<h1>Our Process!</h1>
-			<p>These two levels of information are combined using advanced mathematical and statistical approaches to develop a distinct score, referred to as the D-score, to provide a clear measure of the level of mapping uncertainty for each annotated gene for a particular species. Additionally, mixture model distributions are used to determine categorizations for the mapping uncertainty, and thus recommendations for which genetic expression estimates are reliable following the read alignment step. </p>
-			<div class="fig1"><img border="0" src="./img/" alt="GeneQC " onclick="window.open('./img/figure1.2.jpg', '_blank');" >
-			<p class="fig">To be added</p></div>
-		</div>
-
-		<div class="preamble1" id="zen-preamble1" role="article">
-		  <h1>Citing GeneQC</h1>
-		  <p>To be added</p>
+	  		<div class="preamble1" id="zen-preamble1" role="article">
+		  <h1>Citing MFR</h1>
+		  <p>Y Tian, Y Wang, J Zhao, W Du, YC Liang, Q Ma. Using Machine Learning to Measure Relatedness between Genes: a Multi-Feature Model. BMC genomics, Under review.</p>
 		  <p></p>
 		  <p></p>
 	  </div>
-	  <div id="copyright">
-		<p >
-			<strong>Copyright 2018 © <a href="http://prod.sdstate.edu/agronomy-horticulture-and-plant-science/bioinformatics-and-mathematical-biosciences-lab" target="_blank">BMBL</a>, <a href="http://prod.sdstate.edu/" target="_blank">SDSU</a>. All rights reserved. <br></strong><a href="mailto:qin.ma@sdstate.edu" title="qin.ma@sdstate.edu">Contact us: qin.ma@sdstate.edu</a>  
-		</br>
-		</p>
-	</div>
 	</section>
 <aside class="sidebar" role="complementary"> </aside>
 

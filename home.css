@@ -11,16 +11,6 @@
 
 /* global
 ----------------------------------------------- */
-#particles-js
-{
-	width:100%;
-	height:100%;
-	background-size:auto;
-	background-repeat:repeat;
-	position:absolute;
-	min-height:200px
-}
-
 body {
 background: #fff url(../img/timg.jpg) repeat fixed top left;
 font-family: verdana, helvetica, arial, sans-serif;
@@ -39,7 +29,7 @@ margin: 0 auto -1px auto;
 padding-top: 0px;
 width: 752px;
 border-bottom: 5px solid #09345f;
-height: 2000px;
+height: 1115px;
 }
 .intro{
 	background:url(../img/timg.jpg) repeat top left;
@@ -131,10 +121,10 @@ font-size: 9px;
 /*img 
 ----------------------------------------*/
 .fig1 img {
-    margin-left: 50px;
+    margin-left: 130px;
     border: 1px solid #ccc;
     float: none;
-    width: 600px;
+    width: 450px;
 	image-resolution: from-image;
 }
 
@@ -359,12 +349,6 @@ ul.can{
 	text-align:center;
 	width: 670px;
 	margin: 0 20px 30px 20px;
-}
-
-#copyright{
-	text-align: center;
-	margin: 60px;
-
 }
 /* misc
 --------------------------------- */

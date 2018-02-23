@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>MFR: Multi-Feature Relatedness modeln</title>
 
-	<link rel="stylesheet" media="screen" href="./download.css?v=8may2013">
+	<link rel="stylesheet" media="screen" href="./page/download.css?v=8may2013">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.csszengarden.com/zengarden.xml">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,23 +52,23 @@
 <div class="page-wrapper">
 
 	<section class="intro" id="zen-intro">
-			<div class="hh">
-					<header role="banner">
-					<h4> a </h4>
-						<h1>GeneQC</h1>
-						<h2>Gene expression level Quality Check</h2>
-					</header>
-					<div class = "dh">
-						<ul>
-							<li><a class = "active" href="./home.html">Home</a></li>
-											<li><a href="./author.html">Authors</a></li>
-											<li><a href="./download.html">Download</a></li>
-							<li><a href="./tutorial.html">Tutorial</a></li>
-							<li><a href="./program.html">Program</a></li>
-						</ul>
-					
-					</div>
-					</div>
+	<div class="hh">
+		<header role="banner">
+		<h4> a </h4>
+			<h1>MFR:</h1>
+			<h2>A Machine Learning Model for measuring relatedness between a pair of genes</h2>
+		</header>
+		<div class = "dh">
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+                <li><a href="./description.html">Description</a></li>
+                <li><a class = "active" href="./download.html">Download</a></li>
+                
+                <li><a href="./contact.html">Contact</a></li>
+			</ul>
+		
+		</div>
+		</div>
 		
 
 		<div class="preamble" id="zen-preamble" role="article">
@@ -76,9 +76,9 @@
 		  <p>We have saved the trained <abbr title="Multi-Feasures Relatedness">MFR</abbr> model as a R data, which can be freely downloaded and modified for academic uses.</p>
 		  <ul class="can">
   				<li>
-  				  <p><a href="../data/model.mfr.RData">The trained MFR model.</a></p></li>
+  				  <p><a href="./data/model.mfr.RData">The trained MFR model.</a></p></li>
   				<li>
-  				  <p><a href="../data/examples.mfr.zip">The example files.</a></p></li>
+  				  <p><a href="./data/examples.mfr.zip">The example files.</a></p></li>
 			</ul>
      
       </div>
@@ -87,32 +87,41 @@
 		  <p>We have used MFR model to measure  relatedness of the gene pairs in the <abbr title="Database of Interacting Proteins">DIP</abbr>, geneFriends, cancer and  <abbr title="Kyoto Encyclopedia of Genes and Genomes">KEGG</abbr>-metabolism datasets, in which the positive samples in the <abbr title="Database of Interacting Proteins">DIP</abbr> dataset are  gene pairs with <abbr title="Protein–Protein Interaction">PPI</abbr>s collected from the <a href="http://dip.doe-mbi.ucla.edu/dip/Main.cgi">DIP</a> database and the negative samples  are gene pairs composited randomly by the genes in the positive samples, the  positive samples in the geneFriends dataset are the gene pairs with  co-expressions collected from the <a href="http://www.genefriends.org">geneFriends</a> database and the negative samples are  gene pairs randomly by the genes in the positive samples, the samples in the <a href="https://cancergenome.nih.gov">TCGA</a> cancer datasets are gene pairs composited by the genes up-regulated in four cancer  types including <abbr title="bladder urothelial carcinoma">BLCA</abbr>, <abbr title="breast invasive carcinoma">BRCA</abbr>, <abbr title="colon adenocarcinoma">COAD</abbr> and <abbr title="lung adenocarcinoma">LUAD</abbr>, and the samples in KEGG-metabolism dataset are the gene pairs composited by the genes involved in metabolism pathways collected from the <a href="http://www.kegg.jp">KEGG</a> database. All the results mentioned above are downloaded freely  for further  verification and biological analysis. </p>
          <ul class="can">
 			<li>
-			  <p><a href="../data/dip.mfr.csv">The DIP dataset.</a></p>
+			  <p><a href="./data/dip.mfr.csv">The DIP dataset.</a></p>
 			</li>
   			<li>
-  			  <p><a href="../data/geneFriends.mfr.csv">The geneFriends dataset.</a></p>
+  			  <p><a href="./data/geneFriends.mfr.csv">The geneFriends dataset.</a></p>
   			</li>
   			<li>
-			  <p><a href="../data/blca.mfr.csv">The BLCA dataset.</a></p>
+			  <p><a href="./data/blca.mfr.csv">The BLCA dataset.</a></p>
 			</li>
   			<li>
-  			  <p><a href="../data/brca.mfr.csv">The BRCA dataset.</a></p>
+  			  <p><a href="./data/brca.mfr.csv">The BRCA dataset.</a></p>
   			</li>
   			<li>
-			  <p><a href="../data/coad.mfr.csv">The COAD dataset.</a></p>
+			  <p><a href="./data/coad.mfr.csv">The COAD dataset.</a></p>
 			</li>
   			<li>
-  			  <p><a href="../data/luad.mfr.csv">The LUAD dataset.</a></p>
+  			  <p><a href="./data/luad.mfr.csv">The LUAD dataset.</a></p>
   			</li>
   			<li>
-  			  <p><a href="../data/keggMetabolism.mfr.csv">The KEGG-metabolism dataset.</a></p>
+  			  <p><a href="./data/keggMetabolism.mfr.csv">The KEGG-metabolism dataset.</a></p>
   			</li>
 			</ul>
            
       </div>
 	</section>
 <aside class="sidebar" role="complementary"> </aside>
+		<div class="hh2" id="zen-preamble2" role="article">	
+		<p>Copyright (c) 2017-2018 Computational Systems Biology Group (CSBG),
+		   College of Computer Science and Technology, Jilin University, China. All rights reserved.</p>
+		   		   <a href="https://www.easycounter.com/">
+<img src="https://www.easycounter.com/counter.php?yuantian"
+border="0" alt="Website Hit Counters"></a>
+<br><a href="https://www.easycounter.com/"></a>
 
+		
+		</div>
 
 </div>
 
