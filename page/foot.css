@@ -365,20 +365,19 @@ ul.can{
 .hh2 p{
 	text-align:center;
 	height: 40px;
-	margin: 20px 0 0 0px;
+	margin: 0px 0 0 0px;
 	font-size: 10px;
 	
 }
 .hh2 a{
-	/*display:none;*/
+	display:none;
 	height: 0px;
 	margin: 0 0 0 0;
 }
-.fh {
+.hh2{
+	height: 20px;
 	width: 750px;
-    margin:0 auto 0 auto;
 }
-
 
 /* misc
 --------------------------------- */

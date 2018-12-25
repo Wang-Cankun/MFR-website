@@ -29,24 +29,18 @@ margin: 0 auto -1px auto;
 padding-top: 0px;
 width: 752px;
 border-bottom: 5px solid #09345f;
-height: 1115px;
+height: 945px;
 }
 .intro{
 	background:url(../img/timg.jpg) repeat top left;
     width: 750px;
 	margin-left: 1px;
-	height: 1100px;
-}
-.intro2{
-	background:url(../img/timg.jpg) repeat top left;
-    width: 750px;
-	margin-left: 1px;
-	height: 110px;
+	height: 930px;
 }
 
 header {
 /*display: none;*/
-background: url(../img/header3.gif) no-repeat top left;
+background: #37C6C0 url(../img/header3.gif) no-repeat top left;
 height: 150px;
 
 }
@@ -69,9 +63,15 @@ padding-right: 5px;
 /*position: relative;*/
 margin: 20px 0 0 20px;
 width: 710px;
+	/*height: 600px;*/
 
 }
 .preamble1 {
+margin: 20px 0 0 20px;
+width: 710px;
+}
+
+.preamble2 {
 margin: 20px 0 0 20px;
 width: 710px;
 }
@@ -97,8 +97,6 @@ left: 5px;
 
 .hh{
 	background-color: #37c6c0;
-	width: 750px;
-	overflow: hidden;
 }
 
 /* text
@@ -112,12 +110,9 @@ font-size: 15px;
 margin-top: 10px;
 }
 
-.preamble p, .supporting p, .preamble1 p{
+.preamble p, .supporting p, .preamble1 p, .preamble2 p{
 line-height: 22px;
 text-align:justify;
-}
-.preamble1 p{
-visibility: hidden;
 }
 
 .summary p:last-child {
@@ -131,8 +126,8 @@ font-size: 9px;
 
 /*img 
 ----------------------------------------*/
-.fig1 img {
-    margin-left: 130px;
+.preamble img {
+    margin-left: 110px;
     border: 1px solid #ccc;
     float: none;
     width: 450px;
@@ -292,7 +287,7 @@ height: 20px;
 margin-top: 20px;
 }
 
-.preamble h1, .preamble1 h1{
+.preamble h1, .preamble1 h1, .preamble2 h1{
 /*background: transparent url(h3_theroadtoenlightenment.gif) no-repeat top left;*/
  background-color: #DFe9ff;
  height: 36px;
@@ -349,19 +344,60 @@ background: transparent url(h3_resources.gif) no-repeat top left;
 	font-size: 25px;
 	margin: 5px 0 0 150px;
 }
-ul.can{
-	/*margin: 0 0 500px 0;*/
+/*
+----------------------------------*/
+/*table, th, td
+{
+border: 1px solid black;
 }
-.can li a {
-    font-weight: bold;
-	color: #333;
+table{
+ width: 710px ;
 }
- p.fig{
-	text-align:center;
-	width: 670px;
-	margin: 0 20px 30px 20px;
+th.nn{
+	width: 470px;
+}*/
+/* Border styles */
+#table-1 thead, #table-1 tr {
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: rgb(230, 189, 189);
+}
+#table-1 {
+border-bottom-width: 1px;
+border-bottom-style: solid;
+border-bottom-color: rgb(230, 189, 189);
 }
 
+/* Padding and font style */
+#table-1 td, #table-1 th {
+padding: 5px 10px;
+font-size: 12px;
+font-family: Verdana;
+color: rgb(177, 106, 104);
+}
+
+/* Alternating background colors */
+#table-1 tr:nth-child(even) {
+background: rgb(238, 211, 210)
+}
+#table-1 tr:nth-child(odd) {
+background: #FFF
+}
+ul.can{
+	margin: 0 0 0px 0;
+}
+.can li a {
+    
+    color: #333;
+      
+	font-weight: bold;
+}
+p.end{
+	visibility: hidden;
+}
+.preamble a, .preamble1 a{
+	color:#333;
+} 
 .hh2 p{
 	text-align:center;
 	height: 40px;
@@ -369,17 +405,21 @@ ul.can{
 	font-size: 10px;
 	
 }
-.hh2 a{
-	/*display:none;*/
-	height: 0px;
-	margin: 0 0 0 0;
+.preamble img{
+	height: 40px;
+	width: 200px;
+	margin: 30px 0 0 250px;
+    float: none;
+	
 }
+.hh2 a{
+	display:none;
+	
+	}
 .fh {
 	width: 750px;
-    margin:0 auto 0 auto;
+	margin: 0 auto 0 auto;
 }
-
-
 /* misc
 --------------------------------- */
 abbr { border-width: 0; }

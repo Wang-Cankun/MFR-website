@@ -29,13 +29,13 @@ margin: 0 auto -1px auto;
 padding-top: 0px;
 width: 752px;
 border-bottom: 5px solid #09345f;
-height: 3515px;
+height: 4215px;/*网页高度*/
 }
 .intro{
 	background:url(../img/timg.jpg) repeat top left;
     width: 750px;
 	margin-left: 1px;
-	height: 3500px;
+	height: 4200px;/*网页高度*/
 }
 
 header {
@@ -432,7 +432,10 @@ p.fig{
 	display:none;
 	
 }
-
+.fh{
+	margin: 0 auto 0 auto;
+	width: 750px;
+}
 /* misc
 --------------------------------- */
 abbr { border-width: 0; }

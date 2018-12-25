@@ -49,77 +49,56 @@
 -->
 
 <body id="css-zen-garden">
-<div class="page-wrapper">
+<div dropzone="copy" class="page-wrapper">
 
 	<section class="intro" id="zen-intro">
 	<div class="hh">
-		<header role="banner">
-		<h4> a </h4>
-			<h1>MFR:</h1>
-			<h2>A Machine Learning Model for measuring relatedness between a pair of genes</h2>
-		</header>
-		<div class = "dh">
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-                <li><a href="./description.html">Description</a></li>
-                <li><a class = "active" href="./download.html">Download</a></li>
-                
-                <li><a href="./contact.html">Contact</a></li>
-			</ul>
-		
-		</div>
+		<iframe src="./header.html" frameborder="0" scrolling="no" width="750" height="215px" ></iframe>
 		</div>
 		
 
 	  <div class="preamble" id="zen-preamble" role="article">
 		  <h1>Intro</h1>
-	    <p>Measuring relatedness between a pair of genes under certain conditions is a fundamental technique and still a big challenge in computational biology. Traditionally, such relatedness can be assessed using co-expression similarities. However, they are known for high positive false rates, which severely impact the results of further computational analysis and biological interpretations. In addition, the other type of features, prior-knowledge based similarities, are only viable for measuring general relatedness, because the experiments where the prior knowledge is obtained are usually conducted in a common environment. </p>
-	    <p>&nbsp&nbsp&nbsp&nbsp To solve the problem, we propose a novel machine learning  model for accurately measuring relatedness between genes under given specific  conditions, by organically combining expression similarities and  prior-knowledge based similarities in a novel assessment criterion:  Multi-Features Relatedness (MFR).  Only gene pairs with both high expression similarities and high prior-knowledge  based similarities will be kept and recommended by our model. Intuitively, this  fits a multi-objective <a name="OLE_LINK12"></a>regression problem. We use <abbr title="Support Vector Machine">SVM</abbr> with linear kernel to effectively solve this regression problem,  after transforming it to a single-objective generalized linear logit regression  problem with the following hypotheses: (i) fitting of relatedness supported by  expression similarities is equal to fitting of relatedness supported by  prior-knowledge based similarities; (ii) all features contribute to fitting on  the same level; and (iii) the fitting target relatedness are 0/1 (non-interacting/interacting). </p>
-	    <p>&nbsp&nbsp&nbsp&nbsp Compared with other linear models (<abbr title="Logistic Regression">logist</abbr>, <abbr title="Linear Discriminant Analysis">LDA</abbr>) and co-expression analysis methods (<abbr title= "Pearson Correlation Coefficient">PPC</abbr>, <abbr title="Spearman Rank Correlation">SRC</abbr>, <abbr title="Partial Pearson Correlation">PPC</abbr>, <abbr title="Mutual Information">MI</abbr> and <abbr title="Conditional Mutual Information">CMI</abbr>), the performance of <abbr title="Multi-Features Relatedness">MFR</abbr> model significantly improve the precision, robustness, practicability of measuring relatedness of gene pairs under given certain conditions.</p>
-	    
+	    <p> &nbsp; Measuring conditional relatedness between a pair of genes is a fundamental technique and still a significant challenge in computational biology. Traditionally, such relatedness can be assessed using expression similarities. However, they are known for high false positive rates. Also, the other type of features, prior-knowledge based similarities, is only viable for measuring global relatedness. </p>
+	    <p> &nbsp; To solve the problem, we propose a novel machine learning model for accurately measuring conditional relatedness between a pair of genes, by integrating expression similarities and prior-knowledge based similarities in an assessment criterion: Multi-Features Relatedness (MFR). Only gene pairs with both high expression similarities and high prior-knowledge based similarities will be kept and recommended by our model. Intuitively, this fits a multi-objective regression problem. We use <abbr title="Support Vector Machine">SVM</abbr> with linear kernel to effectively solve this regression problem, after transforming it to a single-objective generalized linear logit regression problem with the following hypotheses: (i) fitting of relatedness supported by expression similarities is equal to fitting of relatedness supported by prior-knowledge based similarities; (ii) all features contribute to fitting on the same level; and (iii) the fitting target relatedness are 0/1 (non-interacting/interacting).&nbsp;</p>
+	    <p>&nbsp;&nbsp;The results show that MFR wins the highest area under curve (AUC) value for identifying gene-gene interactions in development, test and DIP datasets, and specially obtains an improvement on average of precision for detecting gene pairs with both high expression similarities and high prior-knowledge based similarities in all datasets, comparing to other linear models and coexpression analysis methods. Regarding cancer gene network construction and gene function prediction, MFR model also obtains the results with more biological significances and higher average prediction accuracy, than other compared models and methods</p>
 	  </div>
      <div class="preamble1" id="zen-preamble1" role="article">
        <h1>Workflow</h1>
-       <p>The whole workflow of <abbr title="Multi-Feature Relatedness">MFR</abbr> model has five major steps (see Figure 1), including (i) gene pair samples collection from three different databases and a benchmark dataset of a published study; (ii) gene features extraction from three databases for assessing similarity-based gene pair features; (iii) totally 12 similarity-based gene pair features calculation using four gene features and two databases; (iv) <abbr title="Support Vector Machine">SVM</abbr>-based model construction in a 10-fold cross validation, where our model was trained and tested repeatedly in 10 times; and (v) application of the trained model to detect gene-gene interactions in verification datasets, construct cancer gene network, and predict gene function. The results were compared with other linear models and co-expression analysis methods.</p>
-		<div class = "fig1">
-		<img border="0" src="./img/flowchart.gif" alt="Pulpit rock" width="450" height="500">
+       <p>&nbsp;&nbsp;There are five major steps in the whole workflow of <abbr title="Multi-Feature Relatedness">MFR</abbr> model as shown in Figure 1, including (i) gene pair samples collected from three different databases and a benchmark dataset of a published study; (ii) gene features extraction from three databases for assessing similarity-based gene pair features; (iii) totally 12 similarity-based gene pair features calculation using four gene features and two databases; (iv) <abbr title="Support Vector Machine">SVM</abbr>-based model construction by 3-fold cross-validation, where our model is repeatedly trained by 60% gene pairs and developed by other 30% in 3*3 times; and (v) application of the developed model to detect gene-gene interactions in the rest 10% gene pairs and the other two verification datasets, construct cancer gene network, and predict gene function. The results are compared with other linear models and coexpression analysis methods.</p>
+		<div align="center"><img class="fig" border="0" src="img/pipe.png" alt="Pulpit rock" width="372" height="420">
 		<p class = "fig">Figure 1. workflow of <abbr title="Multi-Feature Relatedness">MFR</abbr> model</p>
 		</div>
 	  </div>
       
      <div class="preamble2" id="zen-preamble2" role="article">
 		  <h1>Results</h1>
-		  <p><abbr title="Multi-Feature Relatedness">MFR</abbr> model is applied to predict gene-gene interactions extracted from the <a href="http://coxpresdb.jp">COXPRESdb</a>, <a href="http://www.kegg.jp">KEGG</a> and <a href="http://www.grnpedia.org/trrust/">TRRUST</a> databases and the dataset of <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Large-Scale+Prediction+of+Human+Protein−Protein+Interactions+from+Amino+Acid+Sequence+Based+on+Latent+Topic+Features">Pan et al.'s study</a> in a 10-fold cross validation (see Figure 2), and to identify gene-gene interactions collected from the <a href="http://www.genefriends.org">geneFirends</a> and <a href="http://dip.doe-mbi.ucla.edu/dip/Main.cgi">DIP</a> databases in verification (see Figure 3). The results show that, compared with other linear models and co-expression analysis methods, the performance of <abbr title="Multi-Feature Relatedness">MFR</abbr> model significantly improve the precision and robustness of measuring relatedness between genes. In terms of cancer gene network construction (see Figure 4) and gene function prediction (see Figure 5), <abbr title="Multi-Feature Relatedness">MFR</abbr> model also obtains the results with more biological significances and accuracies than other compared models and methods.</p>
+		  <p>&nbsp;&nbsp;<abbr title="Multi-Feature Relatedness">MFR</abbr> model is applied to predict (1) gene-gene interactions and (2) gene pairs with both high expression similarities and high prior-knowledge based similarities extracted from the <a href="http://coxpresdb.jp">COXPRESdb</a>, <a href="http://www.kegg.jp">KEGG</a> and <a href="http://www.grnpedia.org/trrust/">TRRUST</a> databases and the dataset of <a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Large-Scale+Prediction+of+Human+Protein−Protein+Interactions+from+Amino+Acid+Sequence+Based+on+Latent+Topic+Features">Pan et al.'s study</a> in a 3-fold cross validation (see Figure 2) and in a test the verification (see Figure 3 A-B), and identify (3) gene-gene interactions and (4) gene pairs with both high expression similarities and high prior-knowledge based similarities extracted from the <a href="http://www.genefriends.org">geneFirends</a> and <a href="http://dip.doe-mbi.ucla.edu/dip/Main.cgi">DIP</a> databases in further verification (see Figure 3 C-F).&nbsp;The results show that MFR wins the highest area under curve (AUC) value for identifying gene-gene interactions in development, test and DIP datasets, and specially obtains an improvement on average of precision for detecting gene pairs with both high expression similarities and high prior-knowledge based similarities in all datasets, comparing to other linear models and coexpression analysis methods. Regarding cancer gene network construction and gene function prediction, MFR model also obtains the results with more biological significances and higher average prediction accuracy, than other compared models and methods.</p>
+		  <div>
+		    <div align="center">
+		    	<img class="a3" border="0" src="img/2_1.png" alt="Pulpit rock" width="630" height="230" >
+		    </div>
+	   <p class = "fig">Fig 2. (A) ROCs of nine models or methods for identifying gene-gene interactions by 3-fold cross-validation. (B) Average PPVs of nine models or methods for detecting B0/B1 matched gene pairs by 3-fold cross-validation </p>  </div>
 		  
-		  <div class="fig2"><img class="fig" border="0" src="./img/r1.gif" alt="Pulpit rock" width="350" height="300">
-		  <p class = "fig">Fig 2. ROCs of three linear models and five co-expression analysis methods for identifying gene-gene interactions by 10-fold cross validation </p></div>
+		  <div align="center">
+		  <img class= "fig" border="0" src="img/6_1.png" alt="Pulpit rock" width="630" height="630">
+		  <p class = "fig">Fig 3. ROCs of nine models or methods for identifying gene-gene interactions in the (A) test, (C) GeneFriends and (E) DIP datasets. Average PPVs of nine models or methods for detecting B0/B1 matched gene pairs in the (B) test, (D) GeneFriends and (F) DIP datasets </p></div>
 		  
-		  <div class="fig3"><img class= "a3" border="0" src="./img/r2.gif" alt="Pulpit rock" width="650" height="300">
-		  <p class = "fig">Fig 3. ROCs of three linear models and five co-expression analysis methods for identifying gene-gene interactions in the verification datasets </p></div>
+		  <div align="center"><img class= "a4" border="0" src="img/zhe.png" alt="Pulpit rock" width="630" height="400">
+		  <p class = "fig">Fig 4. A number of metabolic pathways predicted to be directly influenced by increased glutamine and glutamate metabolism in four cancer types. These pathways were predicted in cancer gene networks, where nodes represent up-regulated metabolic genes and edges represent relatedness between genes, measured by five linear models and six coexpression analysis  methods </p></div>
 		  
-		  <div class="fig4"><img class= "a4" border="0" src="./img/r3.gif" alt="Pulpit rock" width="610" height="250">
-		  <p class = "fig">Fig 4. Number of pathways predicted to be directly influenced by increased glutamine and glutamate metabolism in four cancer types. These pathways were predicted in cancer gene networks, where nodes represent up-regulated genes and edges represent relatedness between genes, measured by three linear models and five co-expression analysis methods</p></div>
-		  
-		  <div class="fig5"><img class= "a5" border="0" src="./img/r4.gif" alt="Pulpit rock" width="610" height="250">
-		  <p class = "fig">Fig 5. Percentages of L0- and L1- matched selected genes in eight KEGG metabolic gene networks. In these networks, nodes represent genes involved into KEGG metabolic pathways and edges represent relatedness between genes, measured by three linear models and five co-expression analysis methods.</p></div>
+		  <div  align="center">
+		  <img border="0" src="img/kegg.png" alt="Pulpit rock" width="630" height="400">
+		  <p class = "fig">Fig 5. Percentages of L0- and L1- matched selected genes in nine KEGG metabolic gene networks. In these networks, nodes represent genes involved in KEGG metabolism pathways, and edges represent relatedness between genes, measured by nine models or methods</p></div>
 		  
 	  </div>
       
 	</section>
 <aside class="sidebar" role="complementary"> </aside>
-		<div class="hh2" id="zen-preamble3" role="article">	
-		<p>Copyright (c) 2017-2018 Computational Systems Biology Group (CSBG),
-		   College of Computer Science and Technology, Jilin University, China. All rights reserved.</p>
-		 		   <a href="https://www.easycounter.com/">
-<img src="https://www.easycounter.com/counter.php?yuantian"
-border="0" alt="Website Hit Counters"></a>
-<br><a href="https://www.easycounter.com/"></a>
-
-		 
-		</div>
-
+		
 </div>
-
+</div>
+ <div class= "fh" id="zen-fh" role="foot"><iframe src="foot.html" frameborder="0" scrolling="no" width="750px" height="200px" ></iframe></div>
 <!--
 
 	These superfluous divs/spans were originally provided as catch-alls to add extra imagery.

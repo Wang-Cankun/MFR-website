@@ -46,7 +46,7 @@ height: 1115px;
 
 header {
 /*display: none;*/
-background: url(../img/header3.gif) no-repeat top left;
+background: #37C6C0 url(../img/header3.gif) no-repeat top left;
 height: 150px;
 
 }
@@ -97,8 +97,6 @@ left: 5px;
 
 .hh{
 	background-color: #37c6c0;
-	width: 750px;
-	overflow: hidden;
 }
 
 /* text
@@ -366,20 +364,9 @@ ul.can{
 	text-align:center;
 	height: 40px;
 	margin: 20px 0 0 0px;
-	font-size: 10px;
+	font-size: 3px;
 	
 }
-.hh2 a{
-	/*display:none;*/
-	height: 0px;
-	margin: 0 0 0 0;
-}
-.fh {
-	width: 750px;
-    margin:0 auto 0 auto;
-}
-
-
 /* misc
 --------------------------------- */
 abbr { border-width: 0; }

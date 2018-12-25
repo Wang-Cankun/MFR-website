@@ -53,76 +53,90 @@
 
 	<section class="intro" id="zen-intro">
 	<div class="hh">
-		<header role="banner">
-		<h4> a </h4>
-			<h1>MFR:</h1>
-			<h2>A Machine Learning Model for measuring relatedness between a pair of genes</h2>
-		</header>
-		<div class = "dh">
-			<ul>
-				<li><a href="./index.html">Home</a></li>
-                <li><a href="./description.html">Description</a></li>
-                <li><a class = "active" href="./download.html">Download</a></li>
-                
-                <li><a href="./contact.html">Contact</a></li>
-			</ul>
-		
-		</div>
+		<iframe src="./header.html" frameborder="0" scrolling="no" width="750px" height="215px" ></iframe>
 		</div>
 		
 
 		<div class="preamble" id="zen-preamble" role="article">
-		  <h1>Download</h1>
-		  <p>We have saved the trained <abbr title="Multi-Feasures Relatedness">MFR</abbr> model as a R data, which can be freely downloaded and modified for academic uses.</p>
+		  <h1>Functions</h1>
+		  <p>&nbsp;&nbsp;We have saved the trained and developed <abbr title="Multi-Feasures Relatedness">MFR</abbr> model as an R data, which can be freely downloaded and modified for academic uses. We also provided R function script files for computing gene-pair features and <abbr title="Multi-Feasures Relatedness">MFR</abbr> values, and a guidance file, an example R data file with the result file and a gene expression R data file for teaching and showing others how to use these resource and tools.</p>
 		  <ul class="can">
   				<li>
-  				  <p><a href="./data/model.mfr.RData">The trained MFR model.</a></p></li>
+  				  <p><a href= "data/function files/mfr.model.zip">MFR model.RData (9.1M)</a></p></li>
   				<li>
-  				  <p><a href="./data/examples.mfr.zip">The example files.</a></p></li>
+  				  <p><a href= "data/function files/featureComputing.R">featureComputing.R (3.9K)</a></p></li>
+  				  <li>
+  				  <p><a href= "data/function files/MFRcomputing.R">MFRcomputing.R (334Byte)</a></p></li>
+  				<li>
+  				  <p><a href= "data/function files/exp.matrix.uniprot.human.GPL570.602.zip">exp.matrix.uniprot.human.GPL570.602.RData (1.5G)</a></p></li>
+  				  <li>
+  				  <p><a href= "data/function files/example.gene.pair.zip">example.gene.pair.RData (432Byte)</a></p></li>
+  				<li>
+  				  <p><a href= "data/function files/example.result.zip">example.result.CSV (2.1K)</a></p></li>
+  				  <li>
+  				  <p><a href= "data/function files/guidance.docx">guidance.docx (41K)</a></p></li>
+			</ul>
+		</div>
+   	    <div class="preamble2" id="zen-preamble2" role="article">
+    	 <h1>Dependent Files</h1>
+		  <p>&nbsp;&nbsp;Here are the dependent files for computing gene-pair features and <abbr title="Multi-Feasures Relatedness">MFR</abbr> values.</p>
+
+		  <ul class="can">
+  				<li>
+  				  <p><a href= "data/dependent files/gene.pair.htridb.zip">gene.pair.htridb.RData (200K)</a></p></li>
+  				<li>
+  				  <p><a href= "data/dependent files/geneSpeciesmapping.zip">geneSpeciesmapping.RData (171K)</a></p></li>
+  				  <li>
+  				  <p><a href= "data/dependent files/goTerm2Fathers2NumOfSonMappingData.zip">goTerm2Fathers2NumOfSonMappingData.RData (751K)</a></p></li>
+  				<li>
+  				  <p><a href= "data/dependent files/goTermCFatherSonMappingData.zip">goTermCFatherSonMappingData.RData (4.2K)</a></p></li>
+  				  <li>
+  				  <p><a href= "data/dependent files/hsa.gene.pair.reactome2.zip">hsa.gene.pair.reactome2.RData (422K)</a></p></li>
+  				<li>
+  				  <p><a href= "data/dependent files/human_goAnnotaion.zip">human_goAnnotaion.RData (4.1M)</a></p></li>
+  				  <li>
+  				  <p><a href= "data/dependent files/pcc.m.all2.zip">pcc.m.all2.RData (1.2G)</a></p></li>
 			</ul>
      
       </div>
      <div class="preamble1" id="zen-preamble1" role="article">
-		  <h1>Recourse</h1>
-		  <p>We have used MFR model to measure  relatedness of the gene pairs in the <abbr title="Database of Interacting Proteins">DIP</abbr>, geneFriends, cancer and  <abbr title="Kyoto Encyclopedia of Genes and Genomes">KEGG</abbr>-metabolism datasets, in which the positive samples in the <abbr title="Database of Interacting Proteins">DIP</abbr> dataset are  gene pairs with <abbr title="Protein–Protein Interaction">PPI</abbr>s collected from the <a href="http://dip.doe-mbi.ucla.edu/dip/Main.cgi">DIP</a> database and the negative samples  are gene pairs composited randomly by the genes in the positive samples, the  positive samples in the geneFriends dataset are the gene pairs with  co-expressions collected from the <a href="http://www.genefriends.org">geneFriends</a> database and the negative samples are  gene pairs randomly by the genes in the positive samples, the samples in the <a href="https://cancergenome.nih.gov">TCGA</a> cancer datasets are gene pairs composited by the genes up-regulated in four cancer  types including <abbr title="bladder urothelial carcinoma">BLCA</abbr>, <abbr title="breast invasive carcinoma">BRCA</abbr>, <abbr title="colon adenocarcinoma">COAD</abbr> and <abbr title="lung adenocarcinoma">LUAD</abbr>, and the samples in KEGG-metabolism dataset are the gene pairs composited by the genes involved in metabolism pathways collected from the <a href="http://www.kegg.jp">KEGG</a> database. All the results mentioned above are downloaded freely  for further  verification and biological analysis. </p>
-         <ul class="can">
+       <h1>Resource</h1>
+       <p>&nbsp;&nbsp;<abbr title="Multi-Feasures Relatedness">MFR</abbr> model was trained over the gene-pair samples collected from the <a href="http://coxpresdb.jp">COXPRESdb</a>, <a href="http://www.kegg.jp">KEGG</a> and <a href="http://www.grnpedia.org/trrust/">TRRUST</a> databases and the dataset of the <a href="https://pubs.acs.org/doi/abs/10.1021/pr100618t"> study of Pan at el.</a>, and, in which the positive gene pairs are the coexpressed gene pairs, gene pairs with PPIs, involved in same pathways, or with transcriptional regulatory relationships, and the negatives are the opposites. We have also used <abbr title="Multi-Feasures Relatedness">MFR</abbr> model to measure relatedness of the gene pairs in the  geneFriends, DIP, cancer and KEGG-metabolism datasets, in which the positive gene pairs in the <a href="http://www.genefriends.org">geneFriends</a> dataset are the gene pairs with co-expressions collected from the geneFriends  database and the negatives are gene pairs by permutation of the first genes with the second genes in the positive gene pairs; the positive gene pairs in the <a href="http://dip.doe-mbi.ucla.edu/dip/Main.cgi">DIP</a> dataset are gene pairs with PPIs collected from the <abbr title="Database of Interacting Proteins">DIP</abbr> database and the negatives are by permutation of the first genes with the second genes in the positive gene pairs; the gene pair in the <a href="https://cancergenome.nih.gov">TCGA</a> cancer datasets are composited by the metabolic genes up-regulated in four cancer types including <abbr title="bladder urothelial carcinoma">BLCA</abbr>, <abbr title="breast invasive carcinoma">BRCA</abbr>, <abbr title="colon adenocarcinoma">COAD</abbr> and <abbr title="lung adenocarcinoma">LUAD</abbr>, and the gene pairs in KEGG-metabolism dataset are composited by the genes involved in metabolism pathways collected from the <a href="http://www.kegg.jp">KEGG</a> database. All the datasets and the results mentioned above are downloaded freely for further verification and biological analysis.</p>
+       <ul class="can">
+            <li>
+			  <p><a href= "data/resource data/tr_dv_ts.dataset.zip">MFR model dataset (11M).</a></p>
+			</li>
 			<li>
-			  <p><a href="./data/dip.mfr.csv">The DIP dataset.</a></p>
+			  <p><a href= "data/resource data/GeneFriends.dataset.zip">geneFriends dataset (1.4M).</a></p>
 			</li>
   			<li>
-  			  <p><a href="./data/geneFriends.mfr.csv">The geneFriends dataset.</a></p>
+  			  <p><a href= "data/resource data/DIP.dataset.zip">DIP dataset (235K).</a></p>
   			</li>
   			<li>
-			  <p><a href="./data/blca.mfr.csv">The BLCA dataset.</a></p>
+			  <p><a href= "data/resource data/blca.dataset.zip">BLCA dataset (1.9M).</a></p>
 			</li>
   			<li>
-  			  <p><a href="./data/brca.mfr.csv">The BRCA dataset.</a></p>
+  			  <p><a href= "data/resource data/brca.dataset.zip">BRCA dataset (961K).</a></p>
   			</li>
   			<li>
-			  <p><a href="./data/coad.mfr.csv">The COAD dataset.</a></p>
+			  <p><a href= "data/resource data/coad.dataset.zip">COAD dataset (1.3M).</a></p>
 			</li>
   			<li>
-  			  <p><a href="./data/luad.mfr.csv">The LUAD dataset.</a></p>
+  			  <p><a href= "data/resource data/luad.dataset.zip">LUAD dataset (1.9M).</a></p>
   			</li>
   			<li>
-  			  <p><a href="./data/keggMetabolism.mfr.csv">The KEGG-metabolism dataset.</a></p>
+  			  <p><a href= "data/resource data/keggMetabolism.dataset.zip">KEGG-metabolism dataset (60M).</a></p>
   			</li>
 			</ul>
            
       </div>
 	</section>
 <aside class="sidebar" role="complementary"> </aside>
-		<div class="hh2" id="zen-preamble2" role="article">	
-		<p>Copyright (c) 2017-2018 Computational Systems Biology Group (CSBG),
-		   College of Computer Science and Technology, Jilin University, China. All rights reserved.</p>
-		   		   <a href="https://www.easycounter.com/">
-<img src="https://www.easycounter.com/counter.php?yuantian"
-border="0" alt="Website Hit Counters"></a>
-<br><a href="https://www.easycounter.com/"></a>
+		
 
 		
 		</div>
-
+<div class= "fh" id="zen-fh" role="foot"><iframe src="foot.html" frameborder="0" scrolling="no" width="750px" height="35px" ></iframe>
 </div>
 
 <!--

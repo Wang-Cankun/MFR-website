@@ -29,13 +29,13 @@ margin: 0 auto -1px auto;
 padding-top: 0px;
 width: 752px;
 border-bottom: 5px solid #09345f;
-height: 1115px;
+height: 1845px;
 }
 .intro{
 	background:url(../img/timg.jpg) repeat top left;
     width: 750px;
 	margin-left: 1px;
-	height: 1100px;
+	height: 1830px;
 }
 
 header {
@@ -67,6 +67,11 @@ width: 710px;
 
 }
 .preamble1 {
+margin: 20px 0 0 20px;
+width: 710px;
+}
+
+.preamble2 {
 margin: 20px 0 0 20px;
 width: 710px;
 }
@@ -105,7 +110,7 @@ font-size: 15px;
 margin-top: 10px;
 }
 
-.preamble p, .supporting p, .preamble1 p{
+.preamble p, .supporting p, .preamble1 p, .preamble2 p{
 line-height: 22px;
 text-align:justify;
 }
@@ -282,7 +287,7 @@ height: 20px;
 margin-top: 20px;
 }
 
-.preamble h1, .preamble1 h1{
+.preamble h1, .preamble1 h1, .preamble2 h1{
 /*background: transparent url(h3_theroadtoenlightenment.gif) no-repeat top left;*/
  background-color: #DFe9ff;
  height: 36px;
@@ -410,6 +415,10 @@ p.end{
 .hh2 a{
 	display:none;
 	
+	}
+.fh {
+	width: 750px;
+	margin: 0 auto 0 auto;
 }
 /* misc
 --------------------------------- */
